@@ -159,7 +159,7 @@ export async function getSizes(): Promise<ISizeFetch> {
  * @returns TLatestProductsByLimit
  */
 export async function getLatestProductsByLimit(limit: number): Promise<TLatestProductsByLimit> {
-  return fetch(`${process.env.BACKEND_URL}/api/product/latest?limit=${limit}`, {
+  return fetch(`${process.env.BACKEND_URL}/api/v1/products/latest?limit=${limit}`, {
     method: "GET",
   })
     .then((response) => response.json())
